@@ -5,7 +5,7 @@ Vue.component("demo-template",{
         '        <select2 :options="options" v-model="selected">\n' +
         '          <option disabled value="0">Select one</option>\n' +
         '        </select2>\n' +
-        '      </div>'
+        '      </div>',
 });
 /** Componente select2. */
 Vue.component("select2", {

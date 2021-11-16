@@ -1,5 +1,6 @@
 # Vue32
-Creando un ejemplo de Vue con el plugin Select2 para listar opciones en un formulario o plantilla.
+Creando un ejemplo de Vue con el plugin Select2 para listar opciones en un formulario o plantilla. Con efectos de 
+boostratp.
 
 ## Requisitos
-- Poseer un navegador web.
+- Tener instalado un navegador web.
