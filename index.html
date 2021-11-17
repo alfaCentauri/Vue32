@@ -8,7 +8,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Wrapper Component</title>
+    <title>Vue.js 32: Wrapper Component</title>
     <!-- development version, includes helpful console warnings -->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <link href="css/estilos.css" rel="stylesheet" />
@@ -19,7 +19,26 @@
     <script src="js/select2.js"></script>
 </head>
 <body>
-    <div id="vue-app"></div>
+    <h1 class="text-info">Vue.js 32: Wrapper Component</h1>
+    <p class="text-justify">Ejemplo de Vue.js: Utilizando el plugin select2 de jquery para mostrar un listado con
+        efectos de boostratp versión 4.</p>
+    <div id="vue-app">
+    </div>
+    <!-- using string template here to work around HTML <option> placement restriction -->
+    <script type="text/x-template" id="demo-template">
+        <div>
+            <p>Seleccionado: {{ selected }}</p>
+            <select2 :options="options" v-model="selected">
+                <option disabled value="0">Seleccione uno</option>
+            </select2>
+        </div>
+    </script>
+
+    <script type="text/x-template" id="select2-template">
+        <select>
+            <slot></slot>
+        </select>
+    </script>
     <script src="js/app.js" type="text/javascript"></script>
 </body>
 </html>

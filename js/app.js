@@ -1,18 +1,8 @@
-/** Componentes **/
-Vue.component("demo-template",{
-    template: '<div>\n' +
-        '        <p>Selected: {{ selected }}</p>\n' +
-        '        <select2 :options="options" v-model="selected">\n' +
-        '          <option disabled value="0">Select one</option>\n' +
-        '        </select2>\n' +
-        '      </div>',
-});
+
 /** Componente select2. */
 Vue.component("select2", {
     props: ["options", "value"],
-    template: "<select>\n" +
-        "           <slot></slot>\n" +
-        "      </select>",
+    template: '#select2-template',
     mounted: function() {
         var vm = this;
         $(this.$el)
@@ -50,7 +40,11 @@ var vm = new Vue({
     el: "#vue-app",
     template: "#demo-template",
     data: {
-        selected: 2,
-        options: [{ id: 1, text: "Hello" }, { id: 2, text: "World" }]
+        selected: 0,
+        options: [
+            { id: 1, text: "Perro" },
+            { id: 2, text: "Gato" },
+            { id: 3, text: "Raton" }
+            ]
     }
 });
